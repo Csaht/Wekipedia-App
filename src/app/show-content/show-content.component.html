@@ -1,0 +1,39 @@
+<div class="tableWrapper">
+  <div><h1>Search Clicked</h1></div>
+  <ul>
+    <li>
+      <div>Title : {{ receivedItem.title }}</div>
+    </li>
+    <li>
+      <div>Pageid : {{ receivedItem.pageid }}</div>
+    </li>
+    <li>
+      <div>Type : {{ receivedItem.type }}</div>
+    </li>
+    <li>
+      <div>Description : {{ receivedItem.description }}</div>
+    </li>
+    <li>
+      <div>
+        Action :
+        <button mat-button color="primary" (click)="addProduct(receivedItem)">
+          Favorite</button
+        >&nbsp;
+        <button
+          mat-button
+          color="primary"
+          (click)="removeProduct(receivedItem)"
+        >
+          UnFavorite
+        </button>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="seeFavorites">
+  <p>
+    <span>Note :</span> To See the Favorites List Go to The Home Page and Select
+    The Favorites List from Select Box
+  </p>
+  <button (click)="redirectHome()">See Favorites List</button>
+</div>

@@ -1,0 +1,87 @@
+<div class="filledWrapper">
+  <div class="searchBoxDiv">
+    <form [formGroup]="myForm" *ngIf="serchSection">
+      <div class="searchsect">
+        <input
+          matInput
+          type="search"
+          formControlName="search"
+          placeholder="Search"
+        />
+        <button (click)="serchFunc()">
+          <mat-icon matPrefix>search</mat-icon>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="selectBoxDiv">
+    <mat-form-field appearance="fill">
+      <mat-label>Choose</mat-label>
+      <mat-select>
+        <mat-option value="Search" (click)="mySerchSection()"
+          >Search
+        </mat-option>
+        <mat-option value="Favorites list" (click)="myFavoritesList()"
+          >Favorites list</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+
+<div>
+  <div class="default_Text" *ngIf="default_text">
+    <h1>Please Serch any thing from Serch Box</h1>
+  </div>
+</div>
+
+<div *ngIf="serchSection">
+  <div class="filledWrappert" *ngIf="a">
+    <div><h1>Search Item</h1></div>
+    <table>
+      <thead>
+        <tr>
+          <th>Ns</th>
+          <th>title</th>
+          <th>Pageid</th>
+          <th>Size</th>
+          <th>Wordcount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of required_Val_arr" (click)="secondApi(i.title)">
+          <td>{{ i.ns }}</td>
+          <td>{{ i.title }}</td>
+          <td>{{ i.pageid }}</td>
+          <td>{{ i.size }}</td>
+          <td>{{ i.wordcount }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- *************** -->
+<div class="filledWrappert" *ngIf="favoritesList">
+  <div><h1>Favorites list</h1></div>
+  <table>
+    <thead>
+      <tr>
+        <th>Ns</th>
+        <th>title</th>
+        <th>Pageid</th>
+        <th>Size</th>
+        <th>Wordcount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let j of favoriteItem" (click)="favoriteItemDescription(j)">
+        <td>{{ j.ns }}</td>
+        <td>{{ j.title }}</td>
+        <td>{{ j.pageid }}</td>
+        <td>{{ j.size }}</td>
+        <td>{{ j.wordcount }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,70 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.filledWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0px;
+}
+table,
+th,
+td {
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 6px;
+}
+.selectBoxDiv {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+.searchBoxDiv {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+mat-form-field {
+  /* background: #efeded; */
+  /* border: 2px solid; */
+  border-radius: 4px;
+}
+.default_Text {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.searchsect {
+  display: flex;
+  border: 2px solid;
+  border-radius: 5px;
+}
+
+.tableWrapper {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+}
+.filledWrappert {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+button {
+  padding: 7px;
+  /* color: #fff; */
+  border: none;
+  /* background: red; */
+  font-size: 13px;
+  /* box-shadow: 14px 19px 29px 31px; */
+  font-weight: bold;
+}
+.serchboxf {
+  display: flex;
+  margin: auto;
+  width: 90%;
+}
